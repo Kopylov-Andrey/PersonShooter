@@ -9,6 +9,8 @@ public class CheracterMovementController : MonoBehaviour
 
     [SerializeField] private ThirdPersonCamera TargetCamera;
 
+    [SerializeField] private PayerShooter TargetShooter;
+
     [SerializeField] private Vector3 AimingOffset;
 
 
@@ -32,6 +34,12 @@ public class CheracterMovementController : MonoBehaviour
         {
             TargetCamera.IsRotateTarget = false;
         }
+
+        if (Input.GetMouseButton(0))
+        {
+            TargetShooter.Shoot();
+        }
+
 
         if (Input.GetMouseButtonDown(1))
         {

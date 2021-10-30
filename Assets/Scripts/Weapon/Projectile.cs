@@ -24,7 +24,7 @@ public class Projectile : Entity
 
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, transform.up,out hit, stepLenght) == true)
+        if (Physics.Raycast(transform.position, transform.forward,out hit, stepLenght) == true)
         {
             Destructible dest = hit.collider.transform.root.GetComponent<Destructible>();
 
@@ -33,7 +33,7 @@ public class Projectile : Entity
                 dest.ApplyDamage(m_Damage);
             }
 
-            OnProjetileLifeEnd(hit.collider, hit.point);
+            OnProjetileLifeEnd(hit.collider, hit.point, hit.normal);
         }
 
 
@@ -48,8 +48,14 @@ public class Projectile : Entity
     }
 
 
-    private void OnProjetileLifeEnd(Collider col , Vector3 pos)
+    private void OnProjetileLifeEnd(Collider col , Vector3 pos, Vector3 normal)
     {
+        if(m_ImpactEffectPrefab != null)
+        {
+            ImpactEffect impact = Instantiate(m_ImpactEffectPrefab, pos, Quaternion.LookRotation(normal));
+
+            impact.transform.SetParent(col.transform);
+        }
         Destroy(gameObject);
     }
 

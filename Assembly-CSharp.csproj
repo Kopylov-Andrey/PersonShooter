@@ -57,20 +57,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Cherecters\CheracterMovementController.cs" />
+    <Compile Include="Assets\Scripts\Common\Destructible.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCamera.cs" />
+    <Compile Include="Assets\Scripts\Common\EntitySpawner.cs" />
+    <Compile Include="Assets\Scripts\Common\ImpactEffect.cs" />
+    <Compile Include="Assets\Scripts\Cherecters\AimingRig.cs" />
+    <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
     <Compile Include="Assets\Scripts\Cherecters\CheracterMovement.cs" />
     <Compile Include="Assets\Scripts\Cherecters\ConverterCameraRotation.cs" />
-    <Compile Include="Assets\Scripts\Cherecters\CeracterAnimationState.cs" />
-    <Compile Include="Assets\Scripts\Cherecters\AimingRig.cs" />
-    <Compile Include="Assets\Scripts\Common\Destructible.cs" />
-    <Compile Include="Assets\Scripts\Common\EntitySpawner.cs" />
     <Compile Include="Assets\Scripts\Common\Entity.cs" />
-    <Compile Include="Assets\Scripts\Common\SingletonBase.cs" />
     <Compile Include="Assets\Scripts\Common\CubeArea.cs" />
-    <Compile Include="Assets\Scripts\Common\ImpactEffect.cs" />
-    <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
-    <Compile Include="Assets\Scripts\Weapon\WeaponProperties.cs" />
+    <Compile Include="Assets\Scripts\Cherecters\CeracterAnimationState.cs" />
+    <Compile Include="Assets\Scripts\Common\SingletonBase.cs" />
     <Compile Include="Assets\Scripts\Weapon\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Weapon\WeaponProperties.cs" />
+    <Compile Include="Assets\Scripts\PayerShooter.cs" />
+    <Compile Include="Assets\Scripts\UI\UISight.cs" />
+    <Compile Include="Assets\Scripts\UI\UIWeaponEnergy.cs" />
+    <Compile Include="Assets\Scripts\Cherecters\SpreadShootRig.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

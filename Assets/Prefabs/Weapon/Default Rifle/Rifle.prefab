@@ -31,6 +31,7 @@ Transform:
   - {fileID: 6412417959189361549}
   - {fileID: 6412417959015782082}
   - {fileID: 6412417958412736974}
+  - {fileID: 5200168314702365223}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47,7 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Mode: 0
-  m_TurretProperties: {fileID: 0}
+  m_TurretProperties: {fileID: 11400000, guid: 14caac43fa9f3da489a429e2cabc6dc7, type: 2}
+  m_FirePoint: {fileID: 5200168314702365223}
 --- !u!1 &6412417958412736969
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,6 +209,36 @@ Transform:
   m_Father: {fileID: 3290616436823197116}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 256.122, y: 810.755, z: 144.742}
+--- !u!1 &6563719595699128457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5200168314702365223}
+  m_Layer: 0
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5200168314702365223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6563719595699128457}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0005, y: 0.036, z: 0.4699}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3290616436823197116}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6412417959189788131
 PrefabInstance:
   m_ObjectHideFlags: 0
