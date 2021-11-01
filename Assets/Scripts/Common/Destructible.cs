@@ -32,6 +32,8 @@ public class Destructible : Entity
     private int m_CurrentHitPoints;
     public int HitPoints => m_CurrentHitPoints;
 
+    private bool m_IsDeath = false;
+
     #endregion
 
 
@@ -53,15 +55,20 @@ public class Destructible : Entity
     /// <param name="damage">Урон объекту</param>
     public void ApplyDamage(int damage)
     {
-        if (m_Indestructible) return;
+        if (m_Indestructible || m_IsDeath) return;
 
 
         m_CurrentHitPoints -= damage;
 
 
-        if (m_CurrentHitPoints <= 0) OnDeath();
+        if (m_CurrentHitPoints <= 0)
+        {
+            m_IsDeath = true;
+            OnDeath();
+          
+        }
 
-
+       
     }
 
 

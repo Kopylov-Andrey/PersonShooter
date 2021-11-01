@@ -57,12 +57,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Cherecters\CheracterMovementController.cs" />
+    <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
+    <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\Scripts\Common\Destructible.cs" />
+    <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCamera.cs" />
+    <Compile Include="Assets\Thirdparty\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\PayerShooter.cs" />
     <Compile Include="Assets\Scripts\Common\EntitySpawner.cs" />
+    <Compile Include="Assets\Scripts\UI\UISight.cs" />
     <Compile Include="Assets\Scripts\Common\ImpactEffect.cs" />
     <Compile Include="Assets\Scripts\Cherecters\AimingRig.cs" />
+    <Compile Include="Assets\Scripts\Cherecters\SpreadShootRig.cs" />
+    <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Drone.cs" />
+    <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+    <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\GunShoot.cs" />
     <Compile Include="Assets\Scripts\Cherecters\CheracterMovement.cs" />
     <Compile Include="Assets\Scripts\Cherecters\ConverterCameraRotation.cs" />
     <Compile Include="Assets\Scripts\Common\Entity.cs" />
@@ -71,10 +82,12 @@
     <Compile Include="Assets\Scripts\Common\SingletonBase.cs" />
     <Compile Include="Assets\Scripts\Weapon\Projectile.cs" />
     <Compile Include="Assets\Scripts\Weapon\WeaponProperties.cs" />
-    <Compile Include="Assets\Scripts\PayerShooter.cs" />
-    <Compile Include="Assets\Scripts\UI\UISight.cs" />
     <Compile Include="Assets\Scripts\UI\UIWeaponEnergy.cs" />
-    <Compile Include="Assets\Scripts\Cherecters\SpreadShootRig.cs" />
+    <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\GunAim.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Thirdparty\Sci_fi_Drones\Read me.txt" />
+    <None Include="Assets\Thirdparty\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

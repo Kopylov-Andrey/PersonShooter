@@ -15,7 +15,7 @@ public class Weapon : MonoBehaviour
 
     [SerializeField] private AudioSource m_AudioSource;
 
-    //[SerializeField] private ParticleSystem m_MuzzleParticleSystem;
+    [SerializeField] private ParticleSystem m_MuzzleParticleSystem;
 
     [SerializeField] private float m_PrimaryMaxEnergy;
 
@@ -102,8 +102,8 @@ public class Weapon : MonoBehaviour
         m_RefireTimer = m_WeaponProperties.RateOfFire;
 
 
-        //m_MuzzleParticleSystem.time = 0;
-        //m_MuzzleParticleSystem.Play();
+        m_MuzzleParticleSystem.time = 0;
+        m_MuzzleParticleSystem.Play();
 
         //m_AudioSource.clip = m_WeaponProperties.LaunchSFX;
         m_AudioSource.PlayOneShot(m_WeaponProperties.LaunchSFX);

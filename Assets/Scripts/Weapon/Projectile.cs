@@ -11,7 +11,11 @@ public class Projectile : Entity
 
     [SerializeField] private int m_Damage;
 
-    [SerializeField] private ImpactEffect m_ImpactEffectPrefab;
+    [SerializeField] private ImpactEffect m_ImpactEffectPrefabStone;
+
+    [SerializeField] private ImpactEffect m_ImpactEffectPrefabMetal;
+
+    [SerializeField] private ImpactEffect m_ImpactEffectPrefabWood;
 
     private float m_Timer;
 
@@ -33,7 +37,7 @@ public class Projectile : Entity
                 dest.ApplyDamage(m_Damage);
             }
 
-            OnProjetileLifeEnd(hit.collider, hit.point, hit.normal);
+            OnProjetileLifeEnd(hit.collider, hit.point, hit.normal, hit);
         }
 
 
@@ -48,13 +52,29 @@ public class Projectile : Entity
     }
 
 
-    private void OnProjetileLifeEnd(Collider col , Vector3 pos, Vector3 normal)
+    private void OnProjetileLifeEnd(Collider col , Vector3 pos, Vector3 normal, RaycastHit hit )
     {
-        if(m_ImpactEffectPrefab != null)
+        if(m_ImpactEffectPrefabStone != null)
         {
-            ImpactEffect impact = Instantiate(m_ImpactEffectPrefab, pos, Quaternion.LookRotation(normal));
+            if (hit.transform.tag == "StoneMaterial")
+            {
+                ImpactEffect impact = Instantiate(m_ImpactEffectPrefabStone, pos, Quaternion.LookRotation(normal));
 
-            impact.transform.SetParent(col.transform);
+                impact.transform.SetParent(col.transform);
+            }
+            if (hit.transform.tag == "WoodMaterial")
+            {
+                ImpactEffect impact = Instantiate(m_ImpactEffectPrefabWood, pos, Quaternion.LookRotation(normal));
+
+                impact.transform.SetParent(col.transform);
+            }
+
+            if (hit.transform.tag == "MetalMaterial")
+            {
+                ImpactEffect impact = Instantiate(m_ImpactEffectPrefabMetal, pos, Quaternion.LookRotation(normal));
+
+                impact.transform.SetParent(col.transform);
+            }
         }
         Destroy(gameObject);
     }

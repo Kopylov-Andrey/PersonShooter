@@ -49,7 +49,9 @@ MonoBehaviour:
   m_Velocity: 100
   m_Lifetime: 20
   m_Damage: 10
-  m_ImpactEffectPrefab: {fileID: 3870912212907298012, guid: 47bc26ff7ce292e4694f20d3bff9c3e5, type: 3}
+  m_ImpactEffectPrefabStone: {fileID: -8176972281363499483, guid: 4edabb1c0dde62743b137378c7d22980, type: 3}
+  m_ImpactEffectPrefabMetal: {fileID: 3157572047195666275, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
+  m_ImpactEffectPrefabWood: {fileID: 6749850000810534195, guid: beb3acff7ab73944fb8f470f24d74ed3, type: 3}
 --- !u!82 &5316524552840784486
 AudioSource:
   m_ObjectHideFlags: 0
