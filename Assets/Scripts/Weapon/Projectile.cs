@@ -30,14 +30,19 @@ public class Projectile : Entity
 
         if (Physics.Raycast(transform.position, transform.forward,out hit, stepLenght) == true)
         {
-            Destructible dest = hit.collider.transform.root.GetComponent<Destructible>();
-
-            if(dest != null && dest != m_Parent)
+            if (hit.collider.isTrigger == false)
             {
-                dest.ApplyDamage(m_Damage);
+                Destructible dest = hit.collider.transform.root.GetComponent<Destructible>();
+
+                if (dest != null && dest != m_Parent)
+                {
+                    dest.ApplyDamage(m_Damage);
+                }
+
+                OnProjetileLifeEnd(hit.collider, hit.point, hit.normal, hit);
             }
 
-            OnProjetileLifeEnd(hit.collider, hit.point, hit.normal, hit);
+           
         }
 
 

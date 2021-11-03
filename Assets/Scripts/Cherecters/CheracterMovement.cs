@@ -33,6 +33,7 @@ public class CheracterMovement : MonoBehaviour
     public float JumpSpeed => jumpSpeed;
     public float CrouhHeight => crouhHeight;
     public bool IsAiming => isAiming;
+    public bool IsJump => isJump;
     public bool IsCrouch => isCrouch;
     public bool IsSprint => isSprint;
     public float DistanceToGround => distanceToGround;

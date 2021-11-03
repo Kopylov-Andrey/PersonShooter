@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32131646702bb8141bc6bde827f7fc86, type: 3}
+  m_Name: Drone_Turret_Prop 1
+  m_EditorClassIdentifier: 
+  m_Mode: 0
+  m_Projectileprefab: {fileID: 4731331503391821304, guid: 98760cbe0419e2043b4851d20b264b54, type: 3}
+  m_RateOfFire: 0.15
+  m_EnergyUsage: 2
+  m_EnergyRegenPerSecond: 8
+  m_EnergyAmountToStartFire: 50
+  m_SpreadShotRange: 0.5
+  m_SpraedShotDistanceFactor: 0.1
+  m_LaunchSFX: {fileID: 8300000, guid: a12f0d97c1df4914ca11a69a10a49fc5, type: 3}

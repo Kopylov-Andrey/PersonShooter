@@ -71,6 +71,19 @@ public class Destructible : Entity
        
     }
 
+    public void ApplyHeak(int heal)
+    {
+        m_CurrentHitPoints += heal;
+
+        if (m_CurrentHitPoints > m_HitPoints)
+            m_CurrentHitPoints = m_HitPoints;
+    }
+
+    public void HealFull()
+    {
+        m_CurrentHitPoints = m_HitPoints;
+    }
+
 
     #endregion
 
