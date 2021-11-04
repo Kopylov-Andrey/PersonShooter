@@ -48,7 +48,7 @@ MonoBehaviour:
   m_NickName: 
   m_Velocity: 100
   m_Lifetime: 20
-  m_Damage: 10
+  m_Damage: 2
   m_ImpactEffectPrefabStone: {fileID: -8176972281363499483, guid: 4edabb1c0dde62743b137378c7d22980, type: 3}
   m_ImpactEffectPrefabMetal: {fileID: 3157572047195666275, guid: 02a509a7fa70ed740ba4197e20c5d32d, type: 3}
   m_ImpactEffectPrefabWood: {fileID: 6749850000810534195, guid: beb3acff7ab73944fb8f470f24d74ed3, type: 3}
@@ -64,7 +64,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
