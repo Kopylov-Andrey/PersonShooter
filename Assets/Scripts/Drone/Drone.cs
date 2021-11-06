@@ -15,7 +15,7 @@ public class Drone : Destructible
     [SerializeField] private Material[] DeadMaterials;
 
     [Header("Movement")]
-    [SerializeField] private float HoverAmplitude;
+    [SerializeField] private float HoverAmplitude; 
     [SerializeField] private float HoverSpeed;
     [SerializeField] private float MovementSpeed;
     [SerializeField] private float RotationLerpFactor;
