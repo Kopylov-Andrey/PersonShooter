@@ -56,10 +56,13 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\EntityAction\EntityActionCollector.cs" />
+    <Compile Include="Assets\Scripts\EntityAction\ActionInteract.cs" />
     <Compile Include="Assets\Scripts\Cherecters\CheracterInputController.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\Scripts\Common\Destructible.cs" />
+    <Compile Include="Assets\Scripts\Common\Timer.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
@@ -72,6 +75,8 @@
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
     <Compile Include="Assets\Scripts\Drone\AIDrone.cs" />
+    <Compile Include="Assets\Scripts\SpaceSolider.cs" />
+    <Compile Include="Assets\Scripts\PickupFirstAidKit.cs" />
     <Compile Include="Assets\Scripts\Drone\Drone.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\GunShoot.cs" />
@@ -79,23 +84,19 @@
     <Compile Include="Assets\Scripts\Cherecters\CheracterMovement.cs" />
     <Compile Include="Assets\Scripts\Cherecters\ConverterCameraRotation.cs" />
     <Compile Include="Assets\Scripts\Common\Entity.cs" />
+    <Compile Include="Assets\Scripts\EntityAction\TriggerInteractionAction.cs" />
     <Compile Include="Assets\Scripts\Common\CubeArea.cs" />
     <Compile Include="Assets\Scripts\Cherecters\CeracterAnimationState.cs" />
+    <Compile Include="Assets\Scripts\EntityAction\EntityContextAction.cs" />
     <Compile Include="Assets\Scripts\Common\SingletonBase.cs" />
     <Compile Include="Assets\Scripts\Weapon\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Hint.cs" />
+    <Compile Include="Assets\Scripts\EntityAction\EntityAction.cs" />
     <Compile Include="Assets\Scripts\Weapon\WeaponProperties.cs" />
     <Compile Include="Assets\Scripts\UI\UIWeaponEnergy.cs" />
-    <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\SpaceSolider.cs" />
-    <Compile Include="Assets\Scripts\Common\Timer.cs" />
-    <Compile Include="Assets\Scripts\EntityAction\EntityAction.cs" />
-    <Compile Include="Assets\Scripts\EntityAction\EntityActionCollector.cs" />
     <Compile Include="Assets\Scripts\EntityAction\EntityAnimationAction.cs" />
-    <Compile Include="Assets\Scripts\EntityAction\EntityContextAction.cs" />
-    <Compile Include="Assets\Scripts\EntityAction\ActionInteract.cs" />
-    <Compile Include="Assets\Scripts\EntityAction\TriggerInteractionAction.cs" />
-    <Compile Include="Assets\Scripts\Hint.cs" />
-    <Compile Include="Assets\Scripts\PickupFirstAidKit.cs" />
+    <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\GunAim.cs" />
+    <Compile Include="Assets\Scripts\LadderController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Thirdparty\Sci_fi_Drones\Read me.txt" />

@@ -5,7 +5,9 @@ using UnityEngine;
 public enum InteractType
 {
     PickupItem,
-    EnteringCode
+    EnteringCode,
+    DeactivateDron,
+    ClimbStairs
 
 }
 
@@ -28,7 +30,7 @@ public class ActionInteract : EntityContextAction
 
     public override void SetProperties(EntityActionProperties prop)
     {
-        Properties = prop as ActionInteractProperties;
+        Properties = (ActionInteractProperties) prop;
     }
 
     public override void StartAction()

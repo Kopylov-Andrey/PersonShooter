@@ -12,6 +12,7 @@ public class CharacterAnimatorParamatersName
     public string Aiming;
     public string Ground;
     public string Jump;
+    public string OnStairs;
     public string GroundSpeed;
     public string DistanceToGround;
 

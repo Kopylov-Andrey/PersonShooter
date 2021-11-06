@@ -13,7 +13,7 @@ public class EntityActionCollector : MonoBehaviour
     {
         for (int i = 0; i < m_ParentTransformWithActions.childCount; i++)
         {
-            if (m_ParentTransformWithActions.GetChild(i).gameObject.activeSelf)
+            if (m_ParentTransformWithActions.GetChild(i).gameObject.activeSelf == true)
             {
                EntityAction action = m_ParentTransformWithActions.GetChild(i).GetComponent<EntityAction>();
 
@@ -25,13 +25,13 @@ public class EntityActionCollector : MonoBehaviour
         }
     }
 
-    public T GetAction<T>() where T: EntityAction
+    public T GetAction<T>() where T : EntityAction
     {
         for (int i = 0; i < m_AllActions.Count; i++)
         {
             if (m_AllActions[i] is T)
             {
-                return (T)m_AllActions[i];
+                return (T) m_AllActions[i];
             }
         }
         return null;

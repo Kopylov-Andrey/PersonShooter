@@ -84,9 +84,6 @@ public class TriggerInteractionAction : MonoBehaviour
     private void ActionStarted() 
     {
         OnStartAction(m_Owner);
-
-       
-
     }
 
     private void ActionEnded() 

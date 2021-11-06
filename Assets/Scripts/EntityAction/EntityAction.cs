@@ -35,7 +35,6 @@ public abstract class EntityAction : MonoBehaviour
         m_isStarted = false;
 
         m_EventOnEnd?.Invoke();
-
     }
 
     public virtual void SetProperties(EntityActionProperties prop)

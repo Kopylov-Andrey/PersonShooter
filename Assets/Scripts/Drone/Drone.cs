@@ -54,6 +54,18 @@ public class Drone : Destructible
         }
 
     }
+    public void DroneDactivate()
+    {
+        //enabled = false;
+
+        //for (int i = 0; i < MeshRenderers.Length; i++)
+        //{
+        //    MeshRenderers[i].material = DeadMaterials[i];
+        //}
+
+        OnDeath();
+    }
+
 
     private void Hover()
     {

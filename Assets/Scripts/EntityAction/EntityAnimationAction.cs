@@ -24,7 +24,6 @@ public class EntityAnimationAction : EntityAction
         m_Timer.OnTick += OnTimerTick;
     }
 
-   
 
     public override void EndAction()
     {
@@ -39,8 +38,8 @@ public class EntityAnimationAction : EntityAction
         {
             IsPlayAnimstion = true;
         }
-
-        if (IsPlayAnimstion == false)
+        
+        if (IsPlayAnimstion == true)
         {
             if (m_Animtor.GetCurrentAnimatorStateInfo(0).IsName(m_ActionAnimationName) == false)
             {
