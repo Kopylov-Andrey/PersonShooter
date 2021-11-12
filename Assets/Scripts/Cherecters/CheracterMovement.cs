@@ -24,7 +24,9 @@ public class CheracterMovement : MonoBehaviour
     private bool isJump;// прыгаем
     private bool isCrouch;// приседаем
     private bool isSprint;// бежим
+    private bool onStairs;
     private float distanceToGround;
+    
 
 
     // public
@@ -38,6 +40,7 @@ public class CheracterMovement : MonoBehaviour
     public bool IsSprint => isSprint;
     public float DistanceToGround => distanceToGround;
     public bool IsGrounded => distanceToGround < 0.01f;
+    //public bool OnStairs { get; set; }
 
 
     // private
@@ -110,6 +113,16 @@ public class CheracterMovement : MonoBehaviour
         characterController.height = BaseCharacterHeight;
         characterController.center = new Vector3(0, BaseCharacterHeightOffset, 0);//размер коллайдера в состояние приседа
     }
+    public void TurnOffGravity()
+    {
+        Movementderection += Physics.gravity * Time.deltaTime * 0;
+        onStairs = true;
+    }
+    public void TurnOnGravity()
+    {
+       
+        onStairs = false;
+    }
     private void Move()
     {
         DirectionControl = Vector3.MoveTowards(DirectionControl, TargetDirectionConrol, Time.deltaTime * AccelerationRate);
@@ -125,7 +138,7 @@ public class CheracterMovement : MonoBehaviour
 
             Movementderection = transform.TransformDirection(Movementderection);
         }
-
+        if(onStairs == false)
         Movementderection += Physics.gravity * Time.deltaTime; // добавление гравитации 
 
         characterController.Move(Movementderection * Time.deltaTime);// движение игрока
