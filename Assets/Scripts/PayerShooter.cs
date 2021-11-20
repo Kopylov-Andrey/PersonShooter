@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PayerShooter : MonoBehaviour
 {
-    [SerializeField] private CheracterMovement m_CharacterMovement;
+    [SerializeField] private CharacterMovement m_CharacterMovement;
 
     [SerializeField] private Weapon m_Weapon;
 

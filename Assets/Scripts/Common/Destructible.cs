@@ -99,6 +99,75 @@ public class Destructible : Entity
         m_EventOnDeath?.Invoke();
     }
 
+    public static Destructible FindNearest(Vector3 position)
+    {
+        float minDist = float.MaxValue;
+        Destructible target = null;
+
+        foreach (Destructible dest in m_AllDestructbles)
+        {
+            float curDist = Vector3.Distance(dest.transform.position, position);
+
+            if (curDist < minDist)
+            {
+                minDist = curDist;
+                target = dest;
+            }
+        }
+
+        return target;
+    }
+
+    public static Destructible FindNearestNonTeamMember(Destructible destructible)
+    {
+        float minDist = float.MaxValue;
+        Destructible target = null;
+        foreach (Destructible dest in m_AllDestructbles)
+        {
+            float curDist = Vector3.Distance(dest.transform.position, destructible.transform.position);
+
+            if (curDist < minDist && destructible.TeamId != dest.TeamId)
+            {
+                minDist = curDist;
+                target = dest;
+            }
+        }
+
+        return target;
+
+    }
+
+    public static List<Destructible> GetAllTeamMember(int teamId)
+    {
+        List<Destructible> teamDestructible = new List<Destructible>();
+
+        foreach (Destructible dest in m_AllDestructbles)
+        {
+            if (dest.TeamId == teamId)
+            {
+                teamDestructible.Add(dest);
+            }
+        }
+        return teamDestructible;
+    }
+
+    public static List<Destructible> GetAllNonTeamMember(int teamId)
+    {
+        List<Destructible> teamDestructible = new List<Destructible>();
+
+        foreach (Destructible dest in m_AllDestructbles)
+        {
+            if (dest.TeamId != teamId)
+            {
+                teamDestructible.Add(dest);
+            }
+        }
+        return teamDestructible;
+    }
+
+
+
+
     public static HashSet<Destructible> m_AllDestructbles;
 
     public static IReadOnlyCollection<Destructible> AllDestructibles => m_AllDestructbles; 

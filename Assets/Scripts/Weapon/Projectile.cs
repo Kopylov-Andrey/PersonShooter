@@ -17,6 +17,8 @@ public class Projectile : Entity
 
     [SerializeField] private ImpactEffect m_ImpactEffectPrefabWood;
 
+    [SerializeField] private ImpactEffect m_ImpactEffectPrefabBlood;
+
     private float m_Timer;
 
 
@@ -64,6 +66,12 @@ public class Projectile : Entity
             if (hit.transform.tag == "StoneMaterial")
             {
                 ImpactEffect impact = Instantiate(m_ImpactEffectPrefabStone, pos, Quaternion.LookRotation(normal));
+
+                impact.transform.SetParent(col.transform);
+            }
+            if (hit.transform.tag == "FleshMaterial")   
+            {
+                ImpactEffect impact = Instantiate(m_ImpactEffectPrefabBlood, pos, Quaternion.LookRotation(normal));
 
                 impact.transform.SetParent(col.transform);
             }

@@ -505,23 +505,23 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: vanguard_t_choonyung(Clone)
+    - name: vanguard_t_choonyung (1)(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: vanguard_visor
-      parentName: vanguard_t_choonyung(Clone)
+      parentName: vanguard_t_choonyung (1)(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: vanguard_Mesh
-      parentName: vanguard_t_choonyung(Clone)
+      parentName: vanguard_t_choonyung (1)(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Hips
-      parentName: vanguard_t_choonyung(Clone)
+      parentName: vanguard_t_choonyung (1)(Clone)
       position: {x: -0.001613486, y: 1.0613043, z: 0.011117099}
       rotation: {x: -0, y: -0, z: -1.7201732e-18, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -857,7 +857,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: beb570da3c9598f41b0de6000098f8b6, type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: fbe5bcd98f5105246a0223c966cfc947, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1

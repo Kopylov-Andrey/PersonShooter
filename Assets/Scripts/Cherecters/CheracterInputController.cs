@@ -5,7 +5,7 @@ using UnityEngine;
 public class CheracterInputController: MonoBehaviour
 {
 
-    [SerializeField] private CheracterMovement TargetCheracterMovement;
+    [SerializeField] private CharacterMovement TargetCheracterMovement;
 
     [SerializeField] private EntityActionCollector TargetActionCollector;
 

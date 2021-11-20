@@ -32,7 +32,7 @@ public class CeracterAnimationState : MonoBehaviour
 
     [SerializeField] private CharacterController TargetCharacterController;
 
-    [SerializeField] private CheracterMovement TargetCharacterMovement;
+    [SerializeField] private CharacterMovement TargetCharacterMovement;
 
     [SerializeField] [Space(5)] private CharacterAnimatorParamatersName AnimatorParameterNames;
 

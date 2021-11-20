@@ -7,7 +7,8 @@ public enum InteractType
     PickupItem,
     EnteringCode,
     DeactivateDron,
-    ClimbStairs
+    ClimbStairs,
+    ComplitionOfClimb
 
 }
 

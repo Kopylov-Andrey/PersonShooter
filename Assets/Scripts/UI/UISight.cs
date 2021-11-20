@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UISight : MonoBehaviour
 {
-    [SerializeField] private CheracterMovement m_CharectrMovement;
+    [SerializeField] private CharacterMovement m_CharectrMovement;
 
     [SerializeField] private Image m_ImageSight;
 

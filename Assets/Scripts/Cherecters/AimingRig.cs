@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AimingRig : MonoBehaviour
 {
-    [SerializeField] private CheracterMovement TargetCarecter;
+    [SerializeField] private CharacterMovement TargetCarecter;
     [SerializeField] private UnityEngine.Animations.Rigging.Rig[] Rigs;
     [SerializeField] private UnityEngine.Animations.Rigging.MultiAimConstraint NeckMultiAimState;
     [SerializeField] private UnityEngine.Animations.Rigging.MultiAimConstraint NeckMultiAimCrouch;

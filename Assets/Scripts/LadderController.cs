@@ -8,6 +8,8 @@ public class LadderController : TriggerInteractionAction
     private CharacterController m_CheracterController;
     [SerializeField]
     private float m_Speed;
+    [SerializeField]
+    private Transform Mash;
 
 
     private bool m_IsEndOfStairs;
@@ -15,9 +17,11 @@ public class LadderController : TriggerInteractionAction
 
     private Vector3 MoveDerection = Vector3.zero;
 
+
+
     private void Start()
     {
-        
+       
     }
 
     private void Update()
@@ -30,5 +34,10 @@ public class LadderController : TriggerInteractionAction
 
         m_CheracterController.Move(MoveDerection * Time.deltaTime);
 
+    }
+
+    public void NormalizationCharactersPosition()
+    {
+        Mash.localPosition = new Vector3(0, 0, 0);
     }
 }
