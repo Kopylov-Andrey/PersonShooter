@@ -6,14 +6,14 @@ using UnityEngine;
 public class AIDrone : MonoBehaviour
 {
     [SerializeField] private CubeArea m_MovementArea;
-    [SerializeField] private float m_AngryDistance;
+    [SerializeField] private ColliderViewer m_ColliderViewer;
 
     private Drone m_Drone;
 
     private Vector3 m_MovementPosition;
     private Transform m_ShootTarget;
 
-    private Transform m_Player;
+    
 
     // Unity Events
     private void Start()
@@ -21,12 +21,14 @@ public class AIDrone : MonoBehaviour
         m_Drone = GetComponent<Drone>();
         m_Drone.EventOnDeath.AddListener(OnDroneDeath);
 
-        m_Player = GameObject.FindGameObjectWithTag("Player").transform;
+        m_Drone.OnGetDamage += OnGetDamage;
     }
 
     private void OnDestroy()
     {
         m_Drone.EventOnDeath.RemoveListener(OnDroneDeath);
+
+        m_Drone.OnGetDamage-= OnGetDamage;
 
     }
 
@@ -36,6 +38,10 @@ public class AIDrone : MonoBehaviour
     }
 
     // Handers
+    private void OnGetDamage(Destructible other)
+    {
+        ActionAssignTargetAllTeamMember(other.transform);
+    }
     private void OnDroneDeath()
     {
         enabled = false;
@@ -45,23 +51,34 @@ public class AIDrone : MonoBehaviour
 
     private void UpdateAI()
     {
-        //Update movement position
-        if(transform.position == m_MovementPosition)
+        ActionFindeShootTarget();
+
+        ActionMove();
+        
+        ActionFire();
+    }
+
+    // Action
+    private void ActionFindeShootTarget()
+    {
+        Transform potentionalTarget = FindShootTarget();
+        if (potentionalTarget != null)
+        {
+            ActionAssignTargetAllTeamMember(potentionalTarget);
+        }
+    }
+    private void ActionMove()
+    {
+        if (transform.position == m_MovementPosition)
         {
             m_MovementPosition = m_MovementArea.GetRandomInsideZone();
         }
 
-        if(Physics.Linecast(transform.position, m_MovementPosition) == true)
+        if (Physics.Linecast(transform.position, m_MovementPosition) == true)
         {
             m_MovementPosition = m_MovementArea.GetRandomInsideZone();
         }
-        //Finde Fire Position
-        if (Vector3.Distance(transform.position, m_Player.position) <= m_AngryDistance)
-        {
-            m_ShootTarget = m_Player;
-        }
 
-        // Move
         m_Drone.MoveTo(m_MovementPosition);
 
         if (m_ShootTarget != null)
@@ -73,20 +90,56 @@ public class AIDrone : MonoBehaviour
             m_Drone.LookAt(m_MovementPosition);
         }
 
-        // Fire
-
+    }
+    
+    private void ActionFire()
+    {
         if (m_ShootTarget != null)
         {
-            m_Drone.Fire(m_ShootTarget.position);
+            //if (m_ColliderViewer.IsObjectVisible(target.gameObject) == true)
+                m_Drone.Fire(m_ShootTarget.position);
+        }
+    }
+
+    // Method
+
+    public void SetShootTarget(Transform target)
+    {
+        m_ShootTarget = target;
+    }
+
+    private Transform FindShootTarget()
+    {
+        List<Destructible> targets = Destructible.GetAllNonTeamMember(m_Drone.TeamId);
+
+        for(int i = 0; i < targets.Count; i++)
+        {
+           
+            if (m_ColliderViewer.IsObjectVisible(targets[i].gameObject) == true)
+            {
+                return targets[i].transform;
+            }
+        }
+
+        return null;
+    }
+
+    private void ActionAssignTargetAllTeamMember(Transform other)
+    {
+        List<Destructible> team = Destructible.GetAllTeamMember(m_Drone.TeamId);
+
+        foreach (Destructible dest in team)
+        {
+            AIDrone ai = dest.transform.root.GetComponent<AIDrone>();
+
+            if (ai != null && ai.enabled == true)
+            {
+                ai.SetShootTarget(other);
+              
+            }
+
         }
     }
 
 
-#if UNITY_EDITOR
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, m_AngryDistance);
-    }
-#endif
 }

@@ -77,6 +77,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  m_EventOnGetDamage:
+    m_PersistentCalls:
+      m_Calls: []
   m_ScoreValue: 0
   m_MainMash: {fileID: 8487071132697938320}
   DronTransform: {fileID: 4394146973686580}
@@ -108,7 +111,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a4cd03737e103294d9c71620b6f67200, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.63
+  m_Volume: 0.9
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -205,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MovementArea: {fileID: 0}
-  m_AngryDistance: 10
+  m_ColliderViewer: {fileID: 371249494}
 --- !u!1 &1503955763486280
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +495,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -616,6 +619,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8487071132697938320}
+  - component: {fileID: 371249494}
   m_Layer: 0
   m_Name: Mash
   m_TagString: Untagged
@@ -641,6 +645,21 @@ Transform:
   m_Father: {fileID: 4394146973686580}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &371249494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4537486826456997470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12966fea4511dea48b481106480270aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ViewingAngle: 150
+  m_ViewingDistance: 10
+  m_ViewHeight: 0
 --- !u!1 &8360538321207795420
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,7 +755,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -929,14 +948,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96730f8640590934eacb6f860058e7f9, type: 3}
---- !u!4 &2787185182628805361 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000011693693590, guid: 96730f8640590934eacb6f860058e7f9, type: 3}
-  m_PrefabInstance: {fileID: 2783268366600364135}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2784256274509949867 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9, type: 3}
+  m_PrefabInstance: {fileID: 2783268366600364135}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2787185182628805361 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4000011693693590, guid: 96730f8640590934eacb6f860058e7f9, type: 3}
   m_PrefabInstance: {fileID: 2783268366600364135}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4856771051550576840

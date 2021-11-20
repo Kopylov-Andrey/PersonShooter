@@ -450,7 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_NickName: 
   m_Indestructible: 0
-  m_HitPoints: 100
+  m_HitPoints: 500
   m_TeamId: 0
   m_EventOnDeath:
     m_PersistentCalls:
@@ -479,6 +479,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  m_EventOnGetDamage:
+    m_PersistentCalls:
+      m_Calls: []
   m_ScoreValue: 0
   m_MainMash: {fileID: 3634280899783652320}
   DronTransform: {fileID: 5163431362149785924}
@@ -492,8 +495,8 @@ MonoBehaviour:
   - {fileID: 5184934442024205922}
   - {fileID: 5185307209079580444}
   DeadMaterials:
-  - {fileID: 2100000, guid: dfd43af3a2e1ec44290a2dfc06ed0377, type: 2}
-  - {fileID: 2100000, guid: ed1a5aef06fb54e4380afd5716b65015, type: 2}
+  - {fileID: 2100000, guid: a2de2a5401e9bef4594b3acead341d44, type: 2}
+  - {fileID: 2100000, guid: 583fa0e23babf3444afd5c9aa2b97af3, type: 2}
   HoverAmplitude: 2
   HoverSpeed: 2
   MovementSpeed: 2
@@ -607,7 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MovementArea: {fileID: 0}
-  m_AngryDistance: 10
+  m_ColliderViewer: {fileID: 1124046874651502188}
 --- !u!1 &5163285728471451691
 GameObject:
   m_ObjectHideFlags: 0
@@ -34609,6 +34612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3634280899783652320}
+  - component: {fileID: 1124046874651502188}
   m_Layer: 0
   m_Name: Mash
   m_TagString: Untagged
@@ -34634,3 +34638,18 @@ Transform:
   m_Father: {fileID: 5163431362149785924}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1124046874651502188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8745930251474986030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12966fea4511dea48b481106480270aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ViewingAngle: 150
+  m_ViewingDistance: 10
+  m_ViewHeight: 0

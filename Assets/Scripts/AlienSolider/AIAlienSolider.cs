@@ -11,7 +11,7 @@ public class AIAlienSolider : MonoBehaviour
         Idle,
         PatrolRandom,
         CirclePatrole,
-        PursueTarget,
+        PursuetTarget,
         SeekTarget
     }
 
@@ -34,6 +34,9 @@ public class AIAlienSolider : MonoBehaviour
     private ColliderViewer m_ColliderViewer;
 
     [SerializeField]
+    private float m_AimingDistance;
+
+    [SerializeField]
     private int m_PatrolPathNodeIndex = 0;
 
     private NavMeshPath m_NavMeshPath;
@@ -53,6 +56,13 @@ public class AIAlienSolider : MonoBehaviour
         m_NavMeshPath = new NavMeshPath();
 
         StartBehaviour(m_AIBehavior);
+
+        m_AlienSolider.OnGetDamage += OnGetDamage;
+    }
+
+    private void OnDestroy()
+    {
+        m_AlienSolider.OnGetDamage -= OnGetDamage;
     }
 
     private void Update()
@@ -60,6 +70,17 @@ public class AIAlienSolider : MonoBehaviour
         SyncAgentAndCharacterMovement();
         UpdateAI();
     }
+
+    // Handler
+    private void OnGetDamage(Destructible other)
+    {
+        if (other.TeamId != m_AlienSolider.TeamId)
+        {
+            ActionAssignTargetAllTeamMember(other.transform);
+        }
+    }
+
+
 
     // AI
 
@@ -70,10 +91,22 @@ public class AIAlienSolider : MonoBehaviour
         if (m_AIBehavior == AIBehavior.Idle)
             return;
 
-        if (m_AIBehavior == AIBehavior.PursueTarget)
+        if (m_AIBehavior == AIBehavior.PursuetTarget)
         {
             m_Agent.CalculatePath(pursueTarget.position, m_NavMeshPath);
             m_Agent.SetPath(m_NavMeshPath);
+            
+            if (Vector3.Distance(transform.position, pursueTarget.position) <= m_AimingDistance)
+            {
+                m_CharacterMovement.Aiming();
+               
+                m_AlienSolider.Fire(pursueTarget.position + new Vector3(0, 1, 0));
+            }
+            else
+            {
+                m_CharacterMovement.UnAiming();
+            }
+
         }
 
         if (m_AIBehavior == AIBehavior.SeekTarget)
@@ -113,7 +146,7 @@ public class AIAlienSolider : MonoBehaviour
         if (m_ColliderViewer.IsObjectVisible(potentionalTarget) == true)
         {
             pursueTarget = potentionalTarget.transform;
-            StartBehaviour(AIBehavior.PursueTarget);
+            ActionAssignTargetAllTeamMember(pursueTarget);
         }
         else
         {
@@ -133,22 +166,40 @@ public class AIAlienSolider : MonoBehaviour
 
     private void StartBehaviour(AIBehavior state)
     {
+        if (m_AlienSolider.IsDeath == true) return;
+
         if (state == AIBehavior.Idle)
         {
             m_Agent.isStopped = true;
+
+            m_CharacterMovement.UnAiming();
            
         }
 
         if (state == AIBehavior.PatrolRandom)
         {
             m_Agent.isStopped = false;
+            m_CharacterMovement.UnAiming();
             SetDistinationByPathNode(m_PatrolPath.GetRandomPathNode());
         }
 
         if (state == AIBehavior.CirclePatrole)
         {
+            
             m_Agent.isStopped = false;
+            m_CharacterMovement.UnAiming();
             SetDistinationByPathNode(m_PatrolPath.GetNextNode(ref m_PatrolPathNodeIndex));
+        }
+        
+
+        if (state == AIBehavior.PursuetTarget)
+        {
+            m_Agent.isStopped = false;
+        }
+        if (state == AIBehavior.SeekTarget)
+        {
+            m_Agent.isStopped = false;
+            m_CharacterMovement.UnAiming();
         }
         m_AIBehavior = state;
     }
@@ -161,6 +212,29 @@ public class AIAlienSolider : MonoBehaviour
         yield return new WaitForSeconds(second);
 
         StartBehaviour(previous);
+    }
+
+    private void ActionAssignTargetAllTeamMember(Transform other)
+    {
+        List<Destructible> team = Destructible.GetAllTeamMember(m_AlienSolider.TeamId);
+
+        foreach (Destructible dest in team)
+        {
+            AIAlienSolider ai = dest.transform.root.GetComponent<AIAlienSolider>();
+
+            if(ai != null && ai.enabled == true)
+            {
+                ai.SetPursueTarget(other);
+                ai.StartBehaviour(AIBehavior.PursuetTarget);
+            }
+
+        }
+    }
+
+
+    public void SetPursueTarget(Transform target)
+    {
+        pursueTarget = target;
     }
 
     //Private Method

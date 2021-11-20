@@ -33,6 +33,7 @@ public class Destructible : Entity
     public int HitPoints => m_CurrentHitPoints;
 
     private bool m_IsDeath = false;
+    public bool IsDeath => m_IsDeath;
 
     #endregion
 
@@ -53,12 +54,15 @@ public class Destructible : Entity
     /// Применение дамага к объекту.
     /// </summary>
     /// <param name="damage">Урон объекту</param>
-    public void ApplyDamage(int damage)
+    public void ApplyDamage(int damage, Destructible other)
     {
         if (m_Indestructible || m_IsDeath) return;
 
 
         m_CurrentHitPoints -= damage;
+
+        OnGetDamage?.Invoke(other);
+        m_EventOnGetDamage?.Invoke();
 
 
         if (m_CurrentHitPoints <= 0)
@@ -196,6 +200,10 @@ public class Destructible : Entity
     [SerializeField]
     private UnityEvent m_EventOnDeath;
     public UnityEvent EventOnDeath => m_EventOnDeath;
+
+    [SerializeField]
+    private UnityEvent m_EventOnGetDamage;
+    public UnityAction<Destructible> OnGetDamage;
 
     #region Score
 
