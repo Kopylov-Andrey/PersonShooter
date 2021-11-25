@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\Cherecters\CheracterInputController.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+    <Compile Include="Assets\Scripts\ColliderViewPoints.cs" />
     <Compile Include="Assets\Scripts\PatrolPath.cs" />
     <Compile Include="Assets\Scripts\Common\Destructible.cs" />
     <Compile Include="Assets\Scripts\Common\Timer.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Assets\Scripts\Common\SingletonBase.cs" />
     <Compile Include="Assets\Scripts\Weapon\Projectile.cs" />
     <Compile Include="Assets\Scripts\AlienSolider\AIAlienSolider.cs" />
+    <Compile Include="Assets\Scripts\ColliderViewer.cs" />
     <Compile Include="Assets\Scripts\Hint.cs" />
     <Compile Include="Assets\Scripts\EntityAction\EntityAction.cs" />
     <Compile Include="Assets\Scripts\LadderController.cs" />
@@ -102,8 +104,7 @@
     <Compile Include="Assets\Scripts\UI\UIWeaponEnergy.cs" />
     <Compile Include="Assets\Scripts\EntityAction\EntityAnimationAction.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\ColliderViewer.cs" />
-    <Compile Include="Assets\Scripts\ColliderViewPoints.cs" />
+    <Compile Include="Assets\Scripts\LookAt.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Thirdparty\Sci_fi_Drones\Read me.txt" />
