@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Common\EntitySpawner.cs" />
     <Compile Include="Assets\Scripts\UI\UISight.cs" />
     <Compile Include="Assets\Scripts\Common\ImpactEffect.cs" />
+    <Compile Include="Assets\Scripts\LookAt.cs" />
     <Compile Include="Assets\Scripts\Cherecters\AimingRig.cs" />
     <Compile Include="Assets\Scripts\Cherecters\SpreadShootRig.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
@@ -104,7 +105,9 @@
     <Compile Include="Assets\Scripts\UI\UIWeaponEnergy.cs" />
     <Compile Include="Assets\Scripts\EntityAction\EntityAnimationAction.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\LookAt.cs" />
+    <Compile Include="Assets\Scripts\Vehicle\WheeledVehicle.cs" />
+    <Compile Include="Assets\Scripts\Vehicle\Vehicle.cs" />
+    <Compile Include="Assets\Scripts\Vehicle\VehicleImputControl.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Thirdparty\Sci_fi_Drones\Read me.txt" />

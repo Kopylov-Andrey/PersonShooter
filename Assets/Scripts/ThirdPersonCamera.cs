@@ -137,4 +137,9 @@ public class ThirdPersonCamera : MonoBehaviour
 
     }
 
+    public void SetTarget(Transform target)
+    {
+        Target = target;
+    }
+
 }
