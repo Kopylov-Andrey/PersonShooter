@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{1E90B83F-4C23-997C-C6B6-A97EBEE3B217}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -56,12 +57,15 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Vehicle\Turret.cs" />
     <Compile Include="Assets\Scripts\EntityAction\EntityActionCollector.cs" />
     <Compile Include="Assets\Scripts\AlienSolider\AlienSolider.cs" />
+    <Compile Include="Assets\Scripts\Vehicle\CameraShooter.cs" />
     <Compile Include="Assets\Scripts\EntityAction\ActionInteract.cs" />
     <Compile Include="Assets\Scripts\Cherecters\CheracterInputController.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+    <Compile Include="Assets\Scripts\Vehicle\ShootingVehicleInputControl.cs" />
     <Compile Include="Assets\Scripts\ColliderViewPoints.cs" />
     <Compile Include="Assets\Scripts\PatrolPath.cs" />
     <Compile Include="Assets\Scripts\Common\Destructible.cs" />
@@ -89,10 +93,12 @@
     <Compile Include="Assets\Scripts\Cherecters\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\Cherecters\ConverterCameraRotation.cs" />
     <Compile Include="Assets\Scripts\TriggerAtTopOfLadder.cs" />
+    <Compile Include="Assets\Scripts\Vehicle\WheeledVehicle.cs" />
     <Compile Include="Assets\Scripts\Common\Entity.cs" />
     <Compile Include="Assets\Scripts\EntityAction\TriggerInteractionAction.cs" />
     <Compile Include="Assets\Scripts\Common\CubeArea.cs" />
     <Compile Include="Assets\Scripts\Cherecters\CeracterAnimationState.cs" />
+    <Compile Include="Assets\Scripts\Vehicle\Vehicle.cs" />
     <Compile Include="Assets\Scripts\EntityAction\EntityContextAction.cs" />
     <Compile Include="Assets\Scripts\Common\SingletonBase.cs" />
     <Compile Include="Assets\Scripts\Weapon\Projectile.cs" />
@@ -100,18 +106,20 @@
     <Compile Include="Assets\Scripts\ColliderViewer.cs" />
     <Compile Include="Assets\Scripts\Hint.cs" />
     <Compile Include="Assets\Scripts\EntityAction\EntityAction.cs" />
+    <Compile Include="Assets\Scripts\Vehicle\VehicleInputControl.cs" />
     <Compile Include="Assets\Scripts\LadderController.cs" />
     <Compile Include="Assets\Scripts\Weapon\WeaponProperties.cs" />
     <Compile Include="Assets\Scripts\UI\UIWeaponEnergy.cs" />
     <Compile Include="Assets\Scripts\EntityAction\EntityAnimationAction.cs" />
+    <Compile Include="Assets\Scripts\Vehicle\HoverVehicle.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\Vehicle\WheeledVehicle.cs" />
-    <Compile Include="Assets\Scripts\Vehicle\Vehicle.cs" />
-    <Compile Include="Assets\Scripts\Vehicle\VehicleImputControl.cs" />
+    <Compile Include="Assets\Scripts\EntityAction\ContextActionInputControl.cs" />
+    <Compile Include="Assets\Scripts\EntityAction\ActionUseVehicle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Thirdparty\Sci_fi_Drones\Read me.txt" />
     <None Include="Assets\Thirdparty\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -11,15 +11,19 @@ public class TriggerInteractionAction : MonoBehaviour
 
     [SerializeField] private int m_InteractAmount;
 
-    [SerializeField] private ActionInteractProperties m_ActionProperties;
+    [SerializeField] private UnityEvent m_EventStartInteract;
 
-    [SerializeField] private UnityEvent m_EventOnInteract;
+    [SerializeField] private UnityEvent m_EventEndInteract;
 
-    public UnityEvent EventOnInteract => m_EventOnInteract;
+    //public UnityEvent EventStartInteract => m_EventStartInteract;
+    //public UnityEvent EventEndInteract => m_EventEndInteract;
+
+
+    [SerializeField] protected ActionInteractProperties m_ActionProperties;
 
     protected ActionInteract m_Action;
 
-    private GameObject m_Owner;
+    protected GameObject m_Owner;
 
 
     protected virtual void InitActionProperties()
@@ -84,17 +88,22 @@ public class TriggerInteractionAction : MonoBehaviour
     private void ActionStarted() 
     {
         OnStartAction(m_Owner);
+
+        m_InteractAmount--; 
+
+        m_EventStartInteract?.Invoke();
     }
 
     private void ActionEnded() 
     {
         m_Action.IsCanStart = false;
+        m_Action.IsCanEnd = false;
         m_Action.EventOnStart.RemoveListener(ActionStarted);
         m_Action.EventOnEnd.RemoveListener(ActionEnded);
 
-        m_EventOnInteract?.Invoke();
+        m_EventEndInteract?.Invoke();
 
-        m_InteractAmount--;
+       
 
         OnEndAction(m_Owner);
     }

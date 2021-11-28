@@ -8,7 +8,8 @@ public enum InteractType
     EnteringCode,
     DeactivateDron,
     ClimbStairs,
-    ComplitionOfClimb
+    ComplitionOfClimb,
+    UseVehicle
 
 }
 
@@ -22,24 +23,24 @@ public class ActionInteractProperties : EntityActionProperties
 
 public class ActionInteract : EntityContextAction
 {
-    [SerializeField] private Transform m_Owner;
+    [SerializeField] protected Transform m_Owner;
     [SerializeField] private InteractType m_Type;
 
     public InteractType Type => m_Type;
 
-    private new ActionInteractProperties Properties;
+    protected new ActionInteractProperties Properties;
 
     public override void SetProperties(EntityActionProperties prop)
     {
         Properties = (ActionInteractProperties) prop;
     }
 
-    public override void StartAction()
-    {
-        if (IsCanStart == false) return;
+    //public override void StartAction()
+    //{
+    //    if (IsCanStart == false) return;
 
-        base.StartAction();
+    //    base.StartAction();
 
-        m_Owner.position = Properties.InteractTransform.position;
-    }
+    //    m_Owner.position = Properties.InteractTransform.position;
+    //}
 }

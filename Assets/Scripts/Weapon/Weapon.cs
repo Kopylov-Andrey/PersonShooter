@@ -40,7 +40,7 @@ public class Weapon : MonoBehaviour
         m_Owner = transform.root.GetComponent<Destructible>();
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (m_RefireTimer > 0)
             m_RefireTimer -= Time.deltaTime;

@@ -7,8 +7,6 @@ public class CheracterInputController: MonoBehaviour
 
     [SerializeField] private CharacterMovement TargetCheracterMovement;
 
-    [SerializeField] private EntityActionCollector TargetActionCollector;
-
     [SerializeField] private ThirdPersonCamera TargetCamera;
 
     [SerializeField] private PayerShooter TargetShooter;
@@ -37,15 +35,6 @@ public class CheracterInputController: MonoBehaviour
             TargetCamera.IsRotateTarget = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            List<EntityContextAction> actionList = TargetActionCollector.GetActionList<EntityContextAction>();
-
-            for(int i = 0; i < actionList.Count; i++)
-            {
-                actionList[i].StartAction();
-            }
-        }
 
         if (Input.GetMouseButton(0))
         {

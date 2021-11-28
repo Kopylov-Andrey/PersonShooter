@@ -1,0 +1,459 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AIAlienSolider" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUhBFAEEiBAAAAAAAAggAAGBAAABCAgAAUAAQAAAYA=</HashCode>
+      <FileName>Assets\Scripts\AlienSolider\AIAlienSolider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AlienSolider" Collapsed="true">
+    <Position X="1" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAIAAgAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AlienSolider\AlienSolider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AimingRig" Collapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIOAAEAAAAAAAABAAAEAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Cherecters\AimingRig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterAnimatorParamatersName" Collapsed="true">
+    <Position X="25.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAgAAAAAACgCAAEACAEAAAgAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Cherecters\CeracterAnimationState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnimationCrossFadeParameters" Collapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cherecters\CeracterAnimationState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CeracterAnimationState" Collapsed="true">
+    <Position X="23.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQYAAAAABAAFAAAAgAAAAAAAAAAAAAAQEAAEAAIAAQ=</HashCode>
+      <FileName>Assets\Scripts\Cherecters\CeracterAnimationState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CharacterMovement" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAwQABQDAqYEASAAAAGCAEgCEDAAQwAAIVEACJMAAgA=</HashCode>
+      <FileName>Assets\Scripts\Cherecters\CharacterMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CheracterInputController" Collapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAQAAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\Cherecters\CheracterInputController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConverterCameraRotation" Collapsed="true">
+    <Position X="23.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQCAAAAAAAAAABAAAAAAAoAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cherecters\ConverterCameraRotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpreadShootRig" Collapsed="true">
+    <Position X="20" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAEAAAAAAAAAAAAAAAAAAAIAACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Cherecters\SpreadShootRig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColliderViewer" Collapsed="true">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAEAIAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ColliderViewer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColliderViewPoints" Collapsed="true">
+    <Position X="20" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQECAAEACAAQAAAAAAAAAAAAAAAIAgAAAAAAAABAEA=</HashCode>
+      <FileName>Assets\Scripts\ColliderViewPoints.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CubeArea" Collapsed="true">
+    <Position X="25.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Common\CubeArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Destructible" Collapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAFARAKASAAAAAQhAAQBIgCAEABGBAAAAAAAABICAA=</HashCode>
+      <FileName>Assets\Scripts\Common\Destructible.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entity" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Common\Entity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntitySpawner" Collapsed="true">
+    <Position X="18.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAAiAAAAAAAIAAEAAAAAAAAAAAAAgBAAAAAAQ=</HashCode>
+      <FileName>Assets\Scripts\Common\EntitySpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImpactEffect" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Assets\Scripts\Common\ImpactEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SingletonBase&lt;T&gt;" Collapsed="true">
+    <Position X="18.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Common\SingletonBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Timer" Collapsed="true">
+    <Position X="23.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQgAAAAhAAAAIIAAAAAAAEAAAAACBCAwQAAgEBABAA=</HashCode>
+      <FileName>Assets\Scripts\Common\Timer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AIDrone" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQUBABAAFCAAAAAAAgAAAAAAAQEABACAAAAAAQAABAA=</HashCode>
+      <FileName>Assets\Scripts\Drone\AIDrone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Drone" Collapsed="true">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAEEAAAQBAAQQAACAAAIAAQAgMAAAAAYAAAAAAAAo=</HashCode>
+      <FileName>Assets\Scripts\Drone\Drone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionInteractProperties" Collapsed="true">
+    <Position X="8.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\EntityAction\ActionInteract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionInteract" Collapsed="true">
+    <Position X="5.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAACCAAA=</HashCode>
+      <FileName>Assets\Scripts\EntityAction\ActionInteract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActionUseVehicle" Collapsed="true">
+    <Position X="5.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Assets\Scripts\EntityAction\ActionUseVehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ContextActionInputControl" Collapsed="true">
+    <Position X="21.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\EntityAction\ContextActionInputControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityActionProperties" Collapsed="true">
+    <Position X="8.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\EntityAction\EntityAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityAction" Collapsed="true">
+    <Position X="5.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEiIEAAABAAAAgAAAAAAAAAAAAAAAAAAAAAAACIAg=</HashCode>
+      <FileName>Assets\Scripts\EntityAction\EntityAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityActionCollector" Collapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAABAAAAAAAAAIAAAAAAAAEAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\EntityAction\EntityActionCollector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityAnimationAction" Collapsed="true">
+    <Position X="5.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAgAAAAAAAAAAAEAAAAAIAAQAgAIAQ=</HashCode>
+      <FileName>Assets\Scripts\EntityAction\EntityAnimationAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EntityContextAction" Collapsed="true">
+    <Position X="5.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAgAAgAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\EntityAction\EntityContextAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TriggerInteractionAction" Collapsed="true">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIAAAAAABAAQQAQQQAAAABAAIAIAAIAAQAAAAASAAAA=</HashCode>
+      <FileName>Assets\Scripts\EntityAction\TriggerInteractionAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hint" Collapsed="true">
+    <Position X="25.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwEAAAAACgAAAEAAAAAAAAIAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Hint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LadderController" Collapsed="true">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAACAAAAAABAAAAAAAEAAAggACAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\LadderController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LookAt" Collapsed="true">
+    <Position X="16.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\LookAt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatrolPath" Collapsed="true">
+    <Position X="23.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAACAQAAAAAAAAEAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PatrolPath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatrolPathNode" Collapsed="true">
+    <Position X="25.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PatrolPathNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PayerShooter" Collapsed="true">
+    <Position X="14.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAgAABIAAAAAAAAAAgAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PayerShooter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PickupFirstAidKit" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PickupFirstAidKit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceSolider" Collapsed="true">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SpaceSolider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ThirdPersonCamera" Collapsed="true">
+    <Position X="21.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAUAACqQAIAAABAAACAgAAAAAEBIQAAQAAANhgI=</HashCode>
+      <FileName>Assets\Scripts\ThirdPersonCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TriggerAtTopOfLadder" Collapsed="true">
+    <Position X="25.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAEAAgAAAAQAAAAACABAA=</HashCode>
+      <FileName>Assets\Scripts\TriggerAtTopOfLadder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIHitPointSlider" Collapsed="true">
+    <Position X="14.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAQAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UIHitPointSlider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UISight" Collapsed="true">
+    <Position X="16.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UISight.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIWeaponEnergy" Collapsed="true">
+    <Position X="18.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAgAAAACAAAAAAAAAACAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\UIWeaponEnergy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraShooter" Collapsed="true">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAIAAAABIAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Vehicle\CameraShooter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HoverVehicle" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAiAAAAAAAAEAAAJAEBABABAAgASAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Vehicle\HoverVehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShootingVehicleInputControl" Collapsed="true">
+    <Position X="8.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\Vehicle\ShootingVehicleInputControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Turret" Collapsed="true">
+    <Position X="0.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABYAgAAAAAAAAAAQACABAABEAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\Scripts\Vehicle\Turret.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vehicle" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAACAAAAAgAAIAIAAQAAAAAAgAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Vehicle\Vehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VehicleInputControl" Collapsed="true">
+    <Position X="8.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAACAAAIAAAAAAAAAAIBAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Vehicle\VehicleInputControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WheelAxle" Collapsed="true">
+    <Position X="21.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAIAAAAAAAAAgIAGEQAAAAAgAAgIAAAAACAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Vehicle\WheeledVehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WheeledVehicle" Collapsed="true">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAiAAAAABAAAAQAIAAAgAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Vehicle\WheeledVehicle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projectile" Collapsed="true">
+    <Position X="12.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACUAAAAQIAAAEAAAgAAAAAAABAAAIAQAAAAQAAAAAAQ=</HashCode>
+      <FileName>Assets\Scripts\Weapon\Projectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weapon" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgwAQAAAAKAAAAABQAAAAAAABIAEAAAlDBAEIACQAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapon\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeaponProperties" Collapsed="true">
+    <Position X="20" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAEACAAAAKKAAAAAAAACAAAECAQEAAAiAAQACQEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapon\WeaponProperties.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DecalDestroyer" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Thirdparty\EffectExamples\Shared\Scripts\DecalDestroyer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExtinguishableFire" Collapsed="true">
+    <Position X="20" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAACAAJAAAAAAgAAAEAAAAAAAAAAAAAQCAAAA=</HashCode>
+      <FileName>Assets\Thirdparty\EffectExamples\Shared\Scripts\ExtinguishableFire.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GunAim" Collapsed="true">
+    <Position X="21.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEACCAAAAAAACgAAAAAAAACAAgAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\Thirdparty\EffectExamples\Shared\Scripts\GunAim.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GunShoot" Collapsed="true">
+    <Position X="23.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAEAACIBAAGAAAAAAAAAABQAQgAAAxAAAEAABAI=</HashCode>
+      <FileName>Assets\Thirdparty\EffectExamples\Shared\Scripts\GunShoot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParticleCollision" Collapsed="true">
+    <Position X="18.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAQgAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Thirdparty\EffectExamples\Shared\Scripts\ParticleCollision.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParticleExamples" Collapsed="true">
+    <Position X="20" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAQAAAAAAAIAAAAABAAAQAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Assets\Thirdparty\EffectExamples\Shared\Scripts\ParticleExamples.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParticleMenu" Collapsed="true">
+    <Position X="21.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAAAACAIACAAAAQAAAiAAAAAAAQAEAAAAA=</HashCode>
+      <FileName>Assets\Thirdparty\EffectExamples\Shared\Scripts\ParticleMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Readme" Collapsed="true">
+    <Position X="16.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAQAAAAAAAAAAAAAAAAAAAQAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Thirdparty\EffectExamples\TutorialInfo\Scripts\Readme.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="InteractType" Collapsed="true">
+    <Position X="14.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAADAAAAAIAAEAAAAAABAABAAA=</HashCode>
+      <FileName>Assets\Scripts\EntityAction\ActionInteract.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WeaponMode" Collapsed="true">
+    <Position X="16.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapon\WeaponProperties.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
