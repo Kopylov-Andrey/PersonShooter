@@ -11,6 +11,6 @@ public class UISight : MonoBehaviour
 
     private void Update()
     {
-        m_ImageSight.enabled = m_CharectrMovement.IsAiming;
+        //m_ImageSight.enabled = m_CharectrMovement.IsAiming;
     }
 }

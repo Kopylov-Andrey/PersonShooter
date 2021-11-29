@@ -25,15 +25,16 @@ public abstract class EntityAction : MonoBehaviour
     {
         if (m_isStarted == true) return;
 
-
+       
         m_isStarted = true;
+        //Debug.Log("Class: EntityAction \n public StartAction \n  m_isStarted = " + m_isStarted);
         m_EventOnStart?.Invoke();
     }
 
     public virtual void EndAction()
     {
         m_isStarted = false;
-
+        //Debug.Log("Class: EntityAction \n public EndAction \n  m_isStarted = " + m_isStarted);
         m_EventOnEnd?.Invoke();
     }
 

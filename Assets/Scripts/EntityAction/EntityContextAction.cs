@@ -20,6 +20,7 @@ public class EntityContextAction : EntityAnimationAction
 
         IsCanEnd = false;
 
-        base.StartAction();
+        //base.StartAction();
+        base.EndAction();
     }
 }

@@ -9,7 +9,7 @@ public class CameraShooter : MonoBehaviour
 
     [SerializeField] private RectTransform m_ImageSigh;
 
-
+    // проблем выстрела либо в камере либо в прицеле, попробовать стрелять в прицел а не в направление камеры
 
     public void Shoot()
     {
@@ -19,6 +19,7 @@ public class CameraShooter : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 1000))
         {
             m_Weapon.FirePointLookAt(hit.point);
+            Debug.Log(hit.point);
         }
         else
         {

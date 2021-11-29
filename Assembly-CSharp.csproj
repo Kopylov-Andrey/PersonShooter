@@ -8,8 +8,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{1E90B83F-4C23-997C-C6B6-A97EBEE3B217}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -90,6 +89,7 @@
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\GunShoot.cs" />
     <Compile Include="Assets\Scripts\UI\UIHitPointSlider.cs" />
+    <Compile Include="Assets\Scripts\EntityAction\ActionUseVehicle.cs" />
     <Compile Include="Assets\Scripts\Cherecters\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\Cherecters\ConverterCameraRotation.cs" />
     <Compile Include="Assets\Scripts\TriggerAtTopOfLadder.cs" />
@@ -101,6 +101,7 @@
     <Compile Include="Assets\Scripts\Vehicle\Vehicle.cs" />
     <Compile Include="Assets\Scripts\EntityAction\EntityContextAction.cs" />
     <Compile Include="Assets\Scripts\Common\SingletonBase.cs" />
+    <Compile Include="Assets\Scripts\EntityAction\ContextActionInputControl.cs" />
     <Compile Include="Assets\Scripts\Weapon\Projectile.cs" />
     <Compile Include="Assets\Scripts\AlienSolider\AIAlienSolider.cs" />
     <Compile Include="Assets\Scripts\ColliderViewer.cs" />
@@ -113,13 +114,11 @@
     <Compile Include="Assets\Scripts\EntityAction\EntityAnimationAction.cs" />
     <Compile Include="Assets\Scripts\Vehicle\HoverVehicle.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\EntityAction\ContextActionInputControl.cs" />
-    <Compile Include="Assets\Scripts\EntityAction\ActionUseVehicle.cs" />
+    <Compile Include="Assets\Scripts\Vehicle\VehicleUseTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Thirdparty\Sci_fi_Drones\Read me.txt" />
     <None Include="Assets\Thirdparty\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

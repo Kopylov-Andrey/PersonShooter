@@ -13,6 +13,8 @@ public class CheracterInputController: MonoBehaviour
 
     [SerializeField] private Vector3 AimingOffset;
 
+    [SerializeField] private Vector3 DefaultOffset;
+
 
     private void Start()
     {
@@ -79,5 +81,15 @@ public class CheracterInputController: MonoBehaviour
         {
             TargetCheracterMovement.UnSprint();
         }
+    }
+
+    public void AssignCamera(ThirdPersonCamera camera)
+    {
+        TargetCamera = camera;
+
+        TargetCamera.IsRotateTarget = false;
+
+        TargetCamera.SetTargetOffset(DefaultOffset);
+        TargetCamera.SetTarget(TargetCheracterMovement.transform);
     }
 }
