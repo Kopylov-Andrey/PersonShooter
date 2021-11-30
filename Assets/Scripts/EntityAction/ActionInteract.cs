@@ -9,7 +9,9 @@ public enum InteractType
     DeactivateDron,
     ClimbStairs,
     ComplitionOfClimb,
-    UseVehicle
+    UseVehicle,
+    UseVehicleHover
+
 
 }
 

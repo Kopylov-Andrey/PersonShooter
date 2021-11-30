@@ -15,11 +15,27 @@ public class ActionUseVehicleProperties : ActionInteractProperties
 public class ActionUseVehicle :ActionInteract
 {
 
+
+
+
     [SerializeField]
     [Header("Action Component")]
     private CharacterController m_CharacterController;
 
-    
+    [SerializeField]
+    private GameObject m_Headlights;
+
+    [SerializeField]
+    private AudioSource m_EngineSound;
+
+    [SerializeField]
+    private Turret m_Turret;
+
+    [SerializeField]
+    private ShootingVehicleInputControl m_ShootingVehicleInputControl;
+
+    [SerializeField]
+    private BoxCollider m_BoxCollider;
 
     [SerializeField]
     private CharacterMovement m_CharacterMovement;
@@ -66,7 +82,9 @@ public class ActionUseVehicle :ActionInteract
 
         InVehicle = true;
         // Camera
+        //m_Camera.SetTargetOffset(new Vector3(0.4f, 2f, -3f));
         prop.m_VeicleInput.AssignCamera(m_Camera);
+       
 
         //Vehaicle Input
         prop.m_VeicleInput.enabled = true;
@@ -78,10 +96,22 @@ public class ActionUseVehicle :ActionInteract
         m_CharacterController.enabled = false;
         m_CharacterMovement.enabled = false;
 
+        //Character Movement Vehicle
+        if (m_Turret != null && m_ShootingVehicleInputControl != null)
+        {
+            m_Turret.enabled = true;
+            m_ShootingVehicleInputControl.enabled = true;
+        }
+    
+
         // Hide Visual Model
         m_VisualModel.transform.localPosition = m_VisualModel.transform.localPosition + new Vector3(0, 10000, 0);
 
-      
+        // Collider 
+        m_BoxCollider.enabled = false;
+        
+        m_EngineSound.enabled = true;
+        m_Headlights.SetActive(true);
 
 
     }
@@ -107,10 +137,22 @@ public class ActionUseVehicle :ActionInteract
         m_CharacterController.enabled = true;
         m_CharacterMovement.enabled = true;
 
+        //Character Movement Vehicle
+        if (m_Turret != null && m_ShootingVehicleInputControl != null)
+        {
+            m_Turret.enabled = false;
+            m_ShootingVehicleInputControl.enabled = false;
+        }
+       
+
         // Show Visual Model
         m_VisualModel.transform.localPosition = new Vector3(0, 0, 0);
 
-       
+        // Collider 
+        m_BoxCollider.enabled = true;
 
+
+        m_EngineSound.enabled = false;
+        m_Headlights.SetActive(false);
     }
 }

@@ -19,11 +19,13 @@ public class CameraShooter : MonoBehaviour
         if (Physics.Raycast(ray, out hit, 1000))
         {
             m_Weapon.FirePointLookAt(hit.point);
+            //Debug.DrawRay(m_Camera.transform.position, ray.direction, Color.green);
             Debug.Log(hit.point);
         }
         else
         {
             m_Weapon.FirePointLookAt(m_Camera.transform.position + ray.direction * 1000);
+            //Debug.DrawRay( , m_Camera.transform.position + ray.direction , Color.green);
         }
         if (m_Weapon.CanFire == true)
         {
