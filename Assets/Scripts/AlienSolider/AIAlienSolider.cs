@@ -37,6 +37,9 @@ public class AIAlienSolider : MonoBehaviour
     private float m_AimingDistance;
 
     [SerializeField]
+    private float m_DetectedDistance;
+
+    [SerializeField]
     private int m_PatrolPathNodeIndex = 0;
 
     private NavMeshPath m_NavMeshPath;
@@ -45,12 +48,13 @@ public class AIAlienSolider : MonoBehaviour
     private GameObject potentionalTarget;
     private Transform pursueTarget;
     private Vector3 seekTarget;
+    private bool IsPlayerDetected;
 
     // Unity Event
 
     private void Start()
     {
-        potentionalTarget = Destructible.FindNearestNonTeamMember(m_AlienSolider)?.gameObject;
+        potentionalTarget = Player.Instance.gameObject;
 
         m_CharacterMovement.UpdatePosition = false;
         m_NavMeshPath = new NavMeshPath();
@@ -58,11 +62,13 @@ public class AIAlienSolider : MonoBehaviour
         StartBehaviour(m_AIBehavior);
 
         m_AlienSolider.OnGetDamage += OnGetDamage;
+        m_AlienSolider.EventOnDeath.AddListener(OnDeath);
     }
 
     private void OnDestroy()
     {
         m_AlienSolider.OnGetDamage -= OnGetDamage;
+        m_AlienSolider.EventOnDeath.RemoveListener(OnDeath);
     }
 
     private void Update()
@@ -80,6 +86,10 @@ public class AIAlienSolider : MonoBehaviour
         }
     }
 
+    private void OnDeath()
+    {
+        SendPlayerStopPersute();
+    }
 
 
     // AI
@@ -99,6 +109,10 @@ public class AIAlienSolider : MonoBehaviour
             if (Vector3.Distance(transform.position, pursueTarget.position) <= m_AimingDistance)
             {
                 m_CharacterMovement.Aiming();
+                if (Vector3.Angle(pursueTarget.position - transform.position, transform.forward)< 10 )
+                {
+                    m_Agent.isStopped = true;
+                }
                
                 m_AlienSolider.Fire(pursueTarget.position + new Vector3(0, 1, 0));
             }
@@ -111,6 +125,7 @@ public class AIAlienSolider : MonoBehaviour
 
         if (m_AIBehavior == AIBehavior.SeekTarget)
         {
+            SendPlayerStartPersute();
             m_Agent.CalculatePath(seekTarget, m_NavMeshPath);
             m_Agent.SetPath(m_NavMeshPath);
 
@@ -130,6 +145,8 @@ public class AIAlienSolider : MonoBehaviour
 
         if (m_AIBehavior == AIBehavior.CirclePatrole)
         {
+            SendPlayerStopPersute();
+
             if (AgentReachedDistination() == true)
             {
                 StartCoroutine(SetBehavioutOnTime(AIBehavior.Idle, currentPathNode.IdleTime));
@@ -143,8 +160,10 @@ public class AIAlienSolider : MonoBehaviour
     {
         if (potentionalTarget == null) return;
 
-        if (m_ColliderViewer.IsObjectVisible(potentionalTarget) == true)
+        if (m_ColliderViewer.IsObjectVisible(potentionalTarget) == true || Vector3.Distance(transform.position, potentionalTarget.transform.position) < m_DetectedDistance)
         {
+            SendPlayerStartPersute();
+
             pursueTarget = potentionalTarget.transform;
             ActionAssignTargetAllTeamMember(pursueTarget);
         }
@@ -272,4 +291,30 @@ public class AIAlienSolider : MonoBehaviour
         float factor = m_Agent.velocity.magnitude / m_Agent.speed;
         m_CharacterMovement.TargetDirectionConrol = transform.InverseTransformDirection(m_Agent.velocity.normalized) * factor;
     }
+
+    private void SendPlayerStartPersute()
+    {
+        if (IsPlayerDetected == false)
+        {
+            Player.Instance.StartPersuet();
+            IsPlayerDetected = true;
+        }
+    }
+    private void SendPlayerStopPersute()
+    {
+        if (IsPlayerDetected == true)
+        {
+            Player.Instance.StopPersuet();
+            IsPlayerDetected = false;
+        }
+    }
+
+#if UNITY_EDITOR
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, m_DetectedDistance);
+    }
+#endif
+
 }

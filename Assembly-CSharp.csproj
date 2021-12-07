@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\EntityAction\ContextActionInputControl.cs" />
     <Compile Include="Assets\Scripts\Weapon\Projectile.cs" />
     <Compile Include="Assets\Scripts\AlienSolider\AIAlienSolider.cs" />
+    <Compile Include="Assets\Scripts\Vehicle\VehicleUseTrigger.cs" />
     <Compile Include="Assets\Scripts\ColliderViewer.cs" />
     <Compile Include="Assets\Scripts\Hint.cs" />
     <Compile Include="Assets\Scripts\EntityAction\EntityAction.cs" />
@@ -114,7 +115,8 @@
     <Compile Include="Assets\Scripts\EntityAction\EntityAnimationAction.cs" />
     <Compile Include="Assets\Scripts\Vehicle\HoverVehicle.cs" />
     <Compile Include="Assets\Thirdparty\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\Scripts\Vehicle\VehicleUseTrigger.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\UI\UIPlayerNotic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Thirdparty\Sci_fi_Drones\Read me.txt" />
